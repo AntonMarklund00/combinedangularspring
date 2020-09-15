@@ -1,27 +1,65 @@
-# DemoAngular
+# spring boot
+  1. Create new spring boot project
+  
+  2. <build>
+      <plugins>
+          <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
+          <plugin>
+              <groupId>com.github.eirslett</groupId>
+              <artifactId>frontend-maven-plugin</artifactId>
+              <version>1.6</version>
+              <configuration>
+                  <nodeVersion>v9.11.2</nodeVersion>
+              </configuration>
+              <executions>
+                  <execution>
+                      <id>install-npm</id>
+                      <goals>
+                          <goal>install-node-and-npm</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
+    </build>
+    
+  3. maven generate-source
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
+# Angular
+  1. ng new XXXX
+  
+  2.  cat XXXX/.gitignore >> .gitignore
+  rm -rf XXXX/node* XXXX/src/favicon.ico XXXX/.gitignore XXXX/.git
+  sed -i -e 's/node_/anode/' .gitignore
+  cp -rf XXXX/* .
+  cp XXXX/.??* .
+  rm -rf XXXX
+  sed -i -e 's,dist/XXXX,target/classes/static,' XXXX
+  
+# spring boot
+  1.<execution>
+      <id>npm-install</id>
+      <goals>
+          <goal>npm</goal>
+      </goals>
+    </execution>
 
-## Development server
+  2. maven generate-source
+  
+  3. <execution>
+        <id>npm-build</id>
+        <goals>
+            <goal>npm</goal>
+        </goals>
+        <configuration>
+            <arguments>run-script build</arguments>
+        </configuration>
+      </execution>
+      
+  4. maven generate-source
+  
+  5. ng build --watch
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
