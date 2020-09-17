@@ -97,4 +97,4 @@
   ng build --watch
   ```
 
-## Now if you start your Spring boot application you should be able see angular application on localhost:8080 (provided you use this port). And be able to make live changes in the angular project.
+## Now if you start your Spring boot application you should be able see your angular application on localhost:8080 (provided you use this port). And be able to make live changes in the angular project.
