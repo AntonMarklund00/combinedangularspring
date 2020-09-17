@@ -3,30 +3,32 @@
   Create new spring boot project
   
   2. 
-  a <build>
-  a    <plugins>
-  a        <plugin>
-  a            <groupId>org.springframework.boot</groupId>
-  a            <artifactId>spring-boot-maven-plugin</artifactId>
-  a        </plugin>
-  a        <plugin>
-  a            <groupId>com.github.eirslett</groupId>
-  a            <artifactId>frontend-maven-plugin</artifactId>
-  a            <version>1.6</version>
-  a            <configuration>
-  a                <nodeVersion>v9.11.2</nodeVersion>
-  a            </configuration>
-  a            <executions>
-  a                <execution>
-  a                    <id>install-npm</id>
-  a                    <goals>
-  a                        <goal>install-node-and-npm</goal>
-  a                    </goals>
-  a                </execution>
-  a            </executions>
-  a        </plugin>
-  a    </plugins>
-  a  </build>
+  '''XML
+   <build>
+      <plugins>
+          <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
+          <plugin>
+              <groupId>com.github.eirslett</groupId>
+              <artifactId>frontend-maven-plugin</artifactId>
+              <version>1.6</version>
+              <configuration>
+                  <nodeVersion>v9.11.2</nodeVersion>
+              </configuration>
+              <executions>
+                  <execution>
+                      <id>install-npm</id>
+                      <goals>
+                          <goal>install-node-and-npm</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
+    </build>
+    '''
     
   3. 
   maven generate-source
